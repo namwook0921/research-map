@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en" data-theme="paper">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>My Research Map</title>
+  <script>try{document.documentElement.dataset.theme=localStorage.getItem("research-map-theme")==="dark"?"dark":"paper";}catch{}</script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="atlas" aria-label="My Research Map">
+    <canvas id="stars" aria-hidden="true"></canvas>
+    <div class="atmosphere" aria-hidden="true"></div>
+    <header class="masthead">
+      <a class="brand" href="#" id="brand" aria-label="Return to whole map">
+        <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span><strong>My Research Map</strong><small>A personal research map</small></span>
+      </a>
+      <div class="atlas-search-box" id="atlas-search-box" role="search">
+        <div class="search-input-shell">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg>
+          <span id="search-type" class="search-selected-type" hidden></span>
+          <input id="atlas-search" type="search" placeholder="Search fields, topics, entries…" aria-label="Search fields, topics, and entries" role="combobox" aria-autocomplete="list" aria-controls="search-list" aria-expanded="false" autocomplete="off" spellcheck="false">
+          <button id="search-clear" aria-label="Clear search" hidden>×</button><kbd>⌘ K</kbd>
+        </div>
+        <div id="search-results" class="search-results" hidden>
+          <div id="search-list" role="listbox" aria-label="Search results"></div>
+          <p id="search-status" role="status"></p>
+        </div>
+      </div>
+      <div class="navigation-controls">
+        <div class="view-controls" role="group" aria-label="Map view">
+          <button id="theme-toggle" aria-label="Switch to dark mode" title="Switch to dark mode">☾</button>
+          <button id="view-ontology" aria-pressed="true">Field ontology</button>
+          <button id="view-timeline" aria-pressed="false">Timeline</button>
+        </div>
+      <div class="depth-controls" aria-label="Map depth">
+        <button data-depth="0" class="active" aria-pressed="true"><span>01</span> Fields</button>
+        <i aria-hidden="true"></i>
+        <button data-depth="1" aria-pressed="false"><span>02</span> Topics</button>
+        <i aria-hidden="true"></i>
+        <button data-depth="2" aria-pressed="false"><span>03</span> Entries</button>
+      </div>
+      </div>
+    </header>
+    <svg id="map" role="img" aria-label="Interactive research map. Scroll to explore three depths, drag to move, and select a node to see its connections.">
+      <defs>
+        <filter id="halo" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="7"/></filter>
+        <filter id="soft-glow" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="2"/></filter>
+        <radialGradient id="field-haze"><stop stop-color="currentColor" stop-opacity=".10"/><stop offset="1" stop-color="currentColor" stop-opacity="0"/></radialGradient>
+      </defs>
+      <g id="camera"><g id="regions"></g><g id="edges"></g><g id="nodes"></g></g>
+    </svg>
+    <section id="timeline-view" class="timeline-view" hidden aria-label="Timeline by date of study">
+      <div class="timeline-intro"><span class="eyebrow">YOUR STUDY HISTORY</span><h1>A thread through time.</h1><p>Follow the branches of what you studied.</p></div>
+      <div id="timeline-stage" class="timeline-stage" tabindex="0" role="region" aria-label="Horizontal study timeline. Scroll sideways or use the left and right arrow keys.">
+        <div id="timeline-world" class="timeline-world">
+          <svg id="timeline-branches" class="timeline-branches" aria-hidden="true"></svg>
+          <div id="timeline-months" class="timeline-months"></div>
+        </div>
+      </div>
+      <div class="timeline-footer"><span>Scroll sideways <i>·</i> Drag to travel</span><div><button id="timeline-earlier" aria-label="Earlier studies">←</button><button id="timeline-later" aria-label="Later studies">→</button></div></div>
+    </section>
+    <div class="intro" id="intro"><span class="eyebrow">YOUR IDEAS, CONNECTED</span><h1>Follow your curiosity.</h1><p>Scroll into a field. Discover what connects.</p></div>
+    <aside id="selection" class="selection" hidden aria-live="polite"><span id="selection-kind"></span><strong id="selection-title"></strong><button id="clear-selection" aria-label="Clear selection">×</button></aside>
+    <aside id="entry-sidebar" class="entry-sidebar" hidden aria-hidden="true" aria-labelledby="entry-title">
+      <div class="entry-heading">
+        <div class="entry-heading-top"><span id="entry-type" class="entry-type">Paper</span><button id="entry-close" aria-label="Close entry details">×</button></div>
+        <h2 id="entry-title"></h2>
+      </div>
+      <div id="entry-content" class="entry-content" aria-live="polite"></div>
+    </aside>
+    <footer class="map-footer">
+      <div class="orientation"><div class="mini-map" id="mini-map" aria-hidden="true"></div><span class="depth-caption" id="depth-caption">The whole map</span></div>
+      <div class="gesture-hint"><span class="scroll-mark" aria-hidden="true"></span><span>Scroll down to go deeper <i>·</i> Drag to move</span></div>
+      <div class="map-tools"><div class="legend"><span><i class="paper-key"></i>Paper</span><span><i class="study-key"></i>Study</span></div><button id="zoom-out" aria-label="Zoom out">−</button><button id="zoom-in" aria-label="Zoom in">+</button><button id="home" aria-label="Fit whole map" title="Fit whole map">⌖</button></div>
+    </footer>
+    <p id="map-status" class="sr-only" aria-live="polite"></p>
+    <div id="load-error" class="error" hidden>The map could not load. Please refresh the preview.</div>
+  </main>
+  <script src="entry-sidebar.js" defer></script>
+  <script src="app.js" defer></script>
+</body>
+</html>

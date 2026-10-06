@@ -1,0 +1,112 @@
+{
+  "entries": {
+    "study:vectors": {
+      "id": "study:vectors",
+      "kind": "study",
+      "title": "Vectors",
+      "authors": [],
+      "institutions": [],
+      "publication_year": null,
+      "venue": null,
+      "urls": {
+        "paper": null,
+        "code": null
+      },
+      "studied_month": "2025-01",
+      "sessions": [],
+      "public_insights": [],
+      "asked_questions": [],
+      "related_entry_ids": []
+    },
+    "study:matrices": {
+      "id": "study:matrices",
+      "kind": "study",
+      "title": "Matrices",
+      "authors": [],
+      "institutions": [],
+      "publication_year": null,
+      "venue": null,
+      "urls": {
+        "paper": null,
+        "code": null
+      },
+      "studied_month": "2025-02",
+      "sessions": [],
+      "public_insights": [],
+      "asked_questions": [],
+      "related_entry_ids": []
+    },
+    "study:sorting": {
+      "id": "study:sorting",
+      "kind": "study",
+      "title": "Sorting",
+      "authors": [],
+      "institutions": [],
+      "publication_year": null,
+      "venue": null,
+      "urls": {
+        "paper": null,
+        "code": null
+      },
+      "studied_month": "2025-03",
+      "sessions": [],
+      "public_insights": [],
+      "asked_questions": [],
+      "related_entry_ids": []
+    },
+    "study:graphs": {
+      "id": "study:graphs",
+      "kind": "study",
+      "title": "Graph Algorithms",
+      "authors": [],
+      "institutions": [],
+      "publication_year": null,
+      "venue": null,
+      "urls": {
+        "paper": null,
+        "code": null
+      },
+      "studied_month": "2025-04",
+      "sessions": [],
+      "public_insights": [],
+      "asked_questions": [],
+      "related_entry_ids": []
+    },
+    "study:feedback": {
+      "id": "study:feedback",
+      "kind": "study",
+      "title": "Feedback",
+      "authors": [],
+      "institutions": [],
+      "publication_year": null,
+      "venue": null,
+      "urls": {
+        "paper": null,
+        "code": null
+      },
+      "studied_month": "2025-05",
+      "sessions": [],
+      "public_insights": [],
+      "asked_questions": [],
+      "related_entry_ids": []
+    },
+    "study:stability": {
+      "id": "study:stability",
+      "kind": "study",
+      "title": "Stability",
+      "authors": [],
+      "institutions": [],
+      "publication_year": null,
+      "venue": null,
+      "urls": {
+        "paper": null,
+        "code": null
+      },
+      "studied_month": "2025-06",
+      "sessions": [],
+      "public_insights": [],
+      "asked_questions": [],
+      "related_entry_ids": []
+    }
+  }
+}

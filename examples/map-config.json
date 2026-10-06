@@ -1,0 +1,91 @@
+{
+  "fields": [
+    {
+      "id": "mathematics",
+      "title": "Mathematics",
+      "color": "#61dfbe"
+    },
+    {
+      "id": "computing",
+      "title": "Computing",
+      "color": "#f18aad"
+    },
+    {
+      "id": "engineering",
+      "title": "Engineering",
+      "color": "#a8a3ff"
+    }
+  ],
+  "topics": [
+    {
+      "id": "linear-algebra",
+      "title": "Linear Algebra",
+      "field_ids": [
+        "mathematics",
+        "computing"
+      ],
+      "primary_field_id": "mathematics"
+    },
+    {
+      "id": "algorithms",
+      "title": "Algorithms",
+      "field_ids": [
+        "computing"
+      ],
+      "primary_field_id": "computing"
+    },
+    {
+      "id": "feedback",
+      "title": "Feedback Systems",
+      "field_ids": [
+        "engineering",
+        "mathematics"
+      ],
+      "primary_field_id": "engineering"
+    }
+  ],
+  "memberships": [
+    {
+      "entry_id": "study:vectors",
+      "topic_ids": [
+        "linear-algebra"
+      ],
+      "primary_topic_id": "linear-algebra"
+    },
+    {
+      "entry_id": "study:matrices",
+      "topic_ids": [
+        "linear-algebra"
+      ],
+      "primary_topic_id": "linear-algebra"
+    },
+    {
+      "entry_id": "study:sorting",
+      "topic_ids": [
+        "algorithms"
+      ],
+      "primary_topic_id": "algorithms"
+    },
+    {
+      "entry_id": "study:graphs",
+      "topic_ids": [
+        "algorithms"
+      ],
+      "primary_topic_id": "algorithms"
+    },
+    {
+      "entry_id": "study:feedback",
+      "topic_ids": [
+        "feedback"
+      ],
+      "primary_topic_id": "feedback"
+    },
+    {
+      "entry_id": "study:stability",
+      "topic_ids": [
+        "feedback"
+      ],
+      "primary_topic_id": "feedback"
+    }
+  ]
+}

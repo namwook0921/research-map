@@ -1,0 +1,44 @@
+[
+  {
+    "id": "study:vectors",
+    "kind": "study",
+    "title": "Vectors",
+    "year": null,
+    "concept_ids": []
+  },
+  {
+    "id": "study:matrices",
+    "kind": "study",
+    "title": "Matrices",
+    "year": null,
+    "concept_ids": []
+  },
+  {
+    "id": "study:sorting",
+    "kind": "study",
+    "title": "Sorting",
+    "year": null,
+    "concept_ids": []
+  },
+  {
+    "id": "study:graphs",
+    "kind": "study",
+    "title": "Graph Algorithms",
+    "year": null,
+    "concept_ids": []
+  },
+  {
+    "id": "study:feedback",
+    "kind": "study",
+    "title": "Feedback",
+    "year": null,
+    "concept_ids": []
+  },
+  {
+    "id": "study:stability",
+    "kind": "study",
+    "title": "Stability",
+    "year": null,
+    "concept_ids": []
+  }
+]
