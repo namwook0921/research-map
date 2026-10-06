@@ -145,10 +145,4 @@ Link to `/research-map/` with the trailing slash so relative data paths resolve 
 
 Alternatively, publish this repository with GitHub Pages: **Settings → Pages → Deploy from a branch → main / (root)**. See [GitHub’s Pages guide](https://docs.github.com/en/pages/quickstart).
 
-## A few practical notes
-
-- This repository’s current version contains synthetic examples. Root metadata files, raw exports, and personal website files are ignored by Git.
-- Keep your export, transcripts, and private evidence out of Git. The included `.gitignore` helps, but inspect what you are uploading.
-- More detailed extraction/review prompts are in [the recreation guide](docs/recreate-your-map.md).
-- No reuse license has been selected yet. Public visibility alone does not grant a reuse license.
 
